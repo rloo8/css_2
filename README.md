@@ -1,1 +1,1 @@
-# css_2
+# scss_practice2
