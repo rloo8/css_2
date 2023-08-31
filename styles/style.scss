@@ -1,0 +1,62 @@
+@import url("./reset.scss");
+
+$borderColor: #000;
+$borderWidth: 4px;
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: $borderColor;
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: $borderWidth;
+    border-bottom: $borderWidth solid $borderColor;
+    width: 100%;
+    li {
+      background-color: #fff;
+      width: 25%;
+      padding: 20px 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.container {
+  background-color: $borderColor;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: $borderWidth;
+
+  .cont {
+    background-color: #fff;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20px 1fr 20px;
+
+    img {
+      grid-row: 2/-2;
+      grid-column: span 2;
+      width: 60%;
+      padding: 20px 0;
+      display: block;
+      margin: 0 auto;
+    }
+    span {
+      &:nth-child(2) {
+        text-align: right;
+      }
+      &:nth-child(5) {
+        text-align: right;
+        text-decoration: underline;
+      }
+    }
+  }
+}
